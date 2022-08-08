@@ -1,10 +1,11 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/crypto/crypto_page.dart';
+import 'package:flutter_animation/dart_ipify/dart_ipify_page.dart';
 import 'package:flutter_animation/pages/file_picker.dart';
 import 'package:flutter_animation/pages/toggle_switch.dart';
 import 'package:flutter_animation/razorpay/razorpay_page.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_animation/whatsapp_unilink/whatsapp_unilink.dart';
 
 import 'add_listener.dart';
 import 'add_status_listener.dart';
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: ConvexAppBar(
-        items: [
+        items: const [
           TabItem(icon: Icons.home, title: 'Home'),
           TabItem(icon: Icons.map, title: 'Discovery'),
           TabItem(icon: Icons.add, title: 'Add'),
@@ -42,42 +43,54 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Hero(
+                const Hero(
                   tag: "logo",
                   child: FlutterLogo(size: 100),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                CustomButton(
+                const CustomButton(
+                  title: "Crypto Page",
+                  page: CryptoPage(),
+                ),
+                const CustomButton(
+                  title: "Whatsapp Unlink",
+                  page: WhatsappUniLink(),
+                ),
+                const CustomButton(
+                  title: "Dart Ipify",
+                  page: DartIpifyPage(),
+                ),
+                const CustomButton(
                   title: "Payments",
                   page: RazorPayPage(),
                 ),
-                CustomButton(
+                const CustomButton(
                   title: "Hero Animation",
                   page: HeroAnimation(),
                 ),
-                CustomButton(
+                const CustomButton(
                   title: "Add Listener Page",
                   page: AddListenerPage(),
                 ),
-                CustomButton(
+                const CustomButton(
                   title: "Add Status Listener Page",
                   page: AddStatusListenerPage(),
                 ),
-                CustomButton(
+                const CustomButton(
                   title: "Animated Builder",
                   page: AnimatedBuilderPage(),
                 ),
-                CustomButton(
+                const CustomButton(
                   title: "Simultaneous Animation",
                   page: SimultaneousAnimationPage(),
                 ),
-                CustomButton(
+                const CustomButton(
                   title: "Implicit Animations",
                   page: ImplicitAnimations(),
                 ),
-                CustomButton(
+                const CustomButton(
                   title: "Toggle Switch",
                   page: ToggleSwitches(),
                 ),
