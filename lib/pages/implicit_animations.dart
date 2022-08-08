@@ -1,9 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 class ImplicitAnimations extends StatefulWidget {
   const ImplicitAnimations({Key? key}) : super(key: key);
 
@@ -88,7 +85,7 @@ class _ImplicitAnimationsState extends State<ImplicitAnimations> {
 
 class SineCurve extends Curve {
   final double count;
-  SineCurve({this.count = 1});
+  const SineCurve({this.count = 1});
 
   @override
   double transformInternal(double t) {

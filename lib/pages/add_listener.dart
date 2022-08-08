@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class AddListenerPage extends StatefulWidget {
   const AddListenerPage({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class _AddListenerPageState extends State<AddListenerPage>
   void dispose() {
     controller.dispose();
     super.dispose();
-    
+
     // animation.removeListener(() {});
   }
 
@@ -44,11 +45,20 @@ class _AddListenerPageState extends State<AddListenerPage>
         title: const Text("Home"),
       ),
       body: Center(
-        child: Container(
-          margin: const EdgeInsets.symmetric(vertical: 10),
-          height: animation.value,
-          width: animation.value,
-          child: const FlutterLogo(),
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              height: animation.value,
+              width: animation.value,
+              child: const FlutterLogo(),
+            ),
+            SpinKitDancingSquare(
+              color: Colors.black,
+              size: 50.0,
+              controller: controller,
+            ),
+          ],
         ),
       ),
     );
