@@ -1,5 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/barcode/barcode_page.dart';
 import 'package:flutter_animation/crypto/crypto_page.dart';
 import 'package:flutter_animation/dart_ipify/dart_ipify_page.dart';
 import 'package:flutter_animation/pages/file_picker.dart';
@@ -53,6 +54,10 @@ class HomePage extends StatelessWidget {
                 const CustomButton(
                   title: "Crypto Page",
                   page: CryptoPage(),
+                ),
+                const CustomButton(
+                  title: "Barcode",
+                  page: BarcodePage(),
                 ),
                 const CustomButton(
                   title: "Whatsapp Unlink",
